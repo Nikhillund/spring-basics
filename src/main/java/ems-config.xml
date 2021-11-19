@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="e1" class="com.demo.Employee">
+     	<property name="empid" value="101"/>
+     	<property name="empname" value="Scott"/>
+      </bean>
+     
+     <bean id="m1" class="com.demo.Manager">
+     	<property name="mgrid" value="999"/>
+     	<property name="mgrname" value="101-Manager"/>
+     	<property name="emp" ref="e1"/>
+      </bean>
+     
+
+<bean class="com.demo.Retailer" id="retailer">
+<property name="rid" value="1"/>
+<property name="rname" value="Royal"></property>
+</bean>
+
+
+<bean class="com.demo.Distributor" id="dis" autowire="byName">
+<property name="did" value="1"></property>
+<property name="dname" value="Super"></property>
+</bean>
+
+<bean class="com.demo.Manufacturer" id="man" autowire="byType">
+<property name="mid" value="1"></property>
+<property name="mname" value="Bhavna"></property>
+
+</bean>
+     
+
+</beans>
