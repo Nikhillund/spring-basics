@@ -6,6 +6,7 @@ public class Distributor {
 	private String dname;
 	private Retailer retailer;
 	
+
 	public Distributor() {
 		System.out.println("Distributor object is created.");
 	}
@@ -33,6 +34,11 @@ public class Distributor {
 	}
 	public void setRetailer(Retailer retailer) {
 		this.retailer = retailer;
+	}
+
+	@Override
+	public String toString() {
+		return "Distributor [did=" + did + ", dname=" + dname + ", retailer=" + retailer + "]";
 	}
 	
 
